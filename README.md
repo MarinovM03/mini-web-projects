@@ -1,5 +1,5 @@
 # 👊✋✌️ Rock Paper Scissors Game
-A fun and interactive **Rock Paper Scissors** game built with **HTML**, **CSS**, and **JavaScript**. Challenge the computer in a classic battle of chance and reflexes — and keep track of your score as you play!
+A fun and interactive **Rock Paper Scissors** game built with **JavaScript**, **HTML** and **CSS**. Challenge the computer in a classic battle of chance and reflexes — and keep track of your score as you play!
 
 ---
 
@@ -16,8 +16,8 @@ A fun and interactive **Rock Paper Scissors** game built with **HTML**, **CSS**,
 🛠️ Technologies Used
 ---------------------
 
+* **JavaScript** – for game logic and interactivity  
 * **HTML** – for the structure  
 * **CSS** – for styling and responsive design  
-* **JavaScript** – for game logic and interactivity  
 
 ---------------------
