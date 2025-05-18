@@ -12,7 +12,7 @@ function playGame(playerChoice) {
         result = "IT'S A TIE!"
 
     } else {
-        switch (playerChoice) {
+        switch(playerChoice) {
             case 'rock':
                 result = (computerChoice === 'scissors') ? "YOU WIN!" : "YOU LOSE!";
                 break;
@@ -30,4 +30,16 @@ function playGame(playerChoice) {
     playerDisplay.textContent = `PLAYER: ${playerChoice}`;
     computerDisplay.textContent = `COMPUTER: ${computerChoice}`;
     resultDisplay.textContent = result;
+
+    resultDisplay.classList.remove('greenText', 'redText');
+
+    switch(result) {
+        case 'YOU WIN!':
+            resultDisplay.classList.add('greenText');
+            break;
+
+        case 'YOU LOSE!':
+            resultDisplay.classList.add('redText');
+            break;
+    }
 }
