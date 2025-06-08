@@ -26,12 +26,11 @@ Each project typically includes:
 
 ---
 
-
 ## 🏁 How to Run
 
 1. **Clone this repo:**
     ```sh
-    git clone (https://github.com/MarinovM03/mini-web-projects.git)
+    git clone https://github.com/MarinovM03/mini-web-projects.git
     cd mini-web-projects
     ```
 2. **Pick a project:**  
@@ -50,12 +49,6 @@ _No installations or frameworks required!_
 - Create a reference collection for common logic, UI patterns, and techniques
 - Challenge myself to implement small ideas quickly and cleanly
 - Incrementally improve and refactor code as my style and preferences evolve
-
----
-
-## 📜 License
-
-This repository is licensed under the MIT License. See [LICENSE](LICENSE) for details.
 
 ---
 
