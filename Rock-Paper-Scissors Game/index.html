@@ -8,24 +8,31 @@
 </head>
 <body>
     
-    <h1>Rock - Paper - Scissors</h1>
+    <div class="game-container">
+        <h1>ROCK - PAPER - SCISSORS</h1>
 
-    <div class="choices">
-        <button onclick="playGame('rock')">👊</button>
-        <button onclick="playGame('paper')">✋</button>
-        <button onclick="playGame('scissors')">✌️</button>
-    </div>
+        <div class="choices">
+            <button onclick="playGame('rock')">👊</button>
+            <button onclick="playGame('paper')">✋</button>
+            <button onclick="playGame('scissors')">✌️</button>
+        </div>
 
-    <div id="playerDisplay">PLAYER: </div>
-    <div id="computerDisplay">COMPUTER: </div>
-    <div id="resultDisplay"></div>
+        <div class="game-display">
+            <div id="playerDisplay">PLAYER: </div>
+            <div id="computerDisplay">COMPUTER: </div>
+        </div>
+        
+        <div id="resultDisplay"></div>
 
-    <div class="scoreDisplay">Player Score:
-        <span id="playerScoreDisplay">0</span>
-    </div>
+        <div class="score-container">
+            <div class="scoreDisplay">Player Score:
+                <span id="playerScoreDisplay">0</span>
+            </div>
 
-    <div class="scoreDisplay">Computer Score:
-        <span id="computerScoreDisplay">0</span>
+            <div class="scoreDisplay">Computer Score:
+                <span id="computerScoreDisplay">0</span>
+            </div>
+        </div>
     </div>
 
     <script src="index.js"></script>
