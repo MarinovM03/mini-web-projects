@@ -30,7 +30,7 @@ Each project typically includes:
 
 1. **Clone this repo:**
     ```sh
-    git clone https://github.com/MarinovM03/mini-web-projects.git
+    git clone (https://github.com/MarinovM03/mini-web-projects.git)
     cd mini-web-projects
     ```
 2. **Pick a project:**  
