@@ -6,7 +6,7 @@ A growing collection of small, self-contained web projects built with **JavaScri
 
 ## 🚀 What is this repository?
 
-This repository contains a variety of mini web projects—each in its own folder, ready to run in your browser. These range from classic games like **Rock Paper Scissors** to utility tools, UI demos, and fun experiments. All projects are lightweight and require no build step or dependencies beyond your browser.
+This repository contains a variety of mini web projects—each in its own folder, ready to run in your browser. Projects include simple games, utility tools, UI demos, and creative experiments. All projects are lightweight and require no build step or dependencies beyond your browser.
 
 ---
 
