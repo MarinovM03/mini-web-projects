@@ -1,52 +1,183 @@
-body {
-    font-family: Arial, sans-serif;
-    font-weight: bold;
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    padding: 20px;
+    color: white;
+}
+
+.game-container {
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
+    padding: 50px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    max-width: 650px;
+    width: 100%;
+    text-align: center;
 }
 
 h1 {
     font-size: 3.5rem;
-    color: hsl(0, 0%, 20%);
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 40px;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3), 2px 2px 6px rgba(0, 0, 0, 0.5);
+    letter-spacing: 3px;
+    text-transform: uppercase;
 }
 
 .choices {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
     margin-bottom: 30px;
 }
 
 .choices button {
-    font-size: 7.5rem;
-    min-width: 160px;
-    margin: 0 10px;
-    border-radius: 250px;
-    background-color: hsl(200, 100%, 50%);
+    font-size: 5rem;
+    width: 120px;
+    height: 120px;
+    border: none;
+    border-radius: 50%;
+    background: linear-gradient(145deg, #667eea, #764ba2);
+    color: white;
     cursor: pointer;
-    transition: background-color 0.5s ease;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .choices button:hover {
-    background-color: hsl(200, 100%, 70%);
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(145deg, #7c8ef0, #8a5cb8);
+}
+
+.choices button:active {
+    transform: scale(0.95);
+}
+
+.game-display {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    margin-bottom: 35px;
 }
 
 #playerDisplay, #computerDisplay {
-    font-size: 2.5rem;
+    font-size: 1.7rem;
+    font-weight: 600;
+    padding: 25px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    text-transform: uppercase;
+    min-height: 85px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#playerDisplay {
+    background: rgba(76, 175, 80, 0.2);
+    border-color: rgba(76, 175, 80, 0.3);
+}
+
+#computerDisplay {
+    background: rgba(244, 67, 54, 0.2);
+    border-color: rgba(244, 67, 54, 0.3);
 }
 
 #resultDisplay {
-    font-size: 5rem;
+    font-size: 3rem;
+    font-weight: bold;
     margin: 30px 0;
+    padding: 25px;
+    border-radius: 15px;
+    text-transform: uppercase;
+    min-height: 95px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.score-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    margin-top: 30px;
 }
 
 .scoreDisplay {
-    font-size: 2rem;
+    font-size: 1.4rem;
+    font-weight: 600;
+    padding: 25px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    text-transform: uppercase;
+    min-height: 85px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
-.greenText, #playerScoreDisplay {
-    color: hsl(130, 84%, 54%);
+.scoreDisplay:first-child {
+    background: rgba(76, 175, 80, 0.15);
+    border-color: rgba(76, 175, 80, 0.3);
 }
 
-.redText, #computerScoreDisplay {
-    color: hsl(0, 84%, 60%);
+.scoreDisplay:last-child {
+    background: rgba(244, 67, 54, 0.15);
+    border-color: rgba(244, 67, 54, 0.3);
+}
+
+#playerScoreDisplay, #computerScoreDisplay {
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.greenText {
+    color: #4CAF50;
+    background: rgba(76, 175, 80, 0.1);
+    border: 2px solid rgba(76, 175, 80, 0.3);
+}
+
+.redText {
+    color: #F44336;
+    background: rgba(244, 67, 54, 0.1);
+    border: 2px solid rgba(244, 67, 54, 0.3);
+}
+
+#playerScoreDisplay {
+    color: #4CAF50;
+}
+
+#computerScoreDisplay {
+    color: #F44336;
+}
+
+.scoreDisplay:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+#playerDisplay:hover, #computerDisplay:hover {
+    transform: translateY(-2px);
 }
