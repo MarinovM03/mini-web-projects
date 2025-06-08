@@ -31,7 +31,7 @@ Each project typically includes:
 
 1. **Clone this repo:**
     ```sh
-    git clone https://github.com/your-username/mini-web-projects.git
+    git clone (https://github.com/MarinovM03/mini-web-projects.git)
     cd mini-web-projects
     ```
 2. **Pick a project:**  
@@ -43,23 +43,13 @@ _No installations or frameworks required!_
 
 ---
 
-## 🤝 Contributing
-
-Contributions and suggestions are welcome! If you’d like to add a new mini-project or improve an existing one:
-
-1. Fork the repo
-2. Add your project in a new folder (use clear names)
-3. Include a brief `README.md` in your project folder (optional but helpful)
-4. Open a Pull Request
-
----
-
 ## 💡 Why Mini Projects?
 
-- Practice and learn web development
-- Explore new JavaScript or CSS features
-- Build a portfolio of creative demos
-- Share and inspire others in the community
+- Reinforce and retain core JavaScript, HTML, and CSS skills through repetition
+- Maintain coding habits and stay comfortable with front-end fundamentals
+- Create a reference collection for common logic, UI patterns, and techniques
+- Challenge myself to implement small ideas quickly and cleanly
+- Incrementally improve and refactor code as my style and preferences evolve
 
 ---
 
@@ -69,4 +59,4 @@ This repository is licensed under the MIT License. See [LICENSE](LICENSE) for de
 
 ---
 
-Happy coding! 🚀
+Quick ideas, fast code. 🚀
