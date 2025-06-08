@@ -23,5 +23,3 @@ Each project typically includes:
 - `index.html` &nbsp;— The main HTML file
 - `index.js` &nbsp;&nbsp;&nbsp;— JavaScript logic
 - `styles.css` &nbsp;— Custom styles
-
-Example:
