@@ -1,68 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Inter:wght@400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: hsl(0, 0%, 90%);
+    justify-content: center;
+    background: linear-gradient(135deg, #1e1e2e 0%, #2a2a3e 100%);
+    font-family: 'Inter', sans-serif;
+    color: #ffffff;
 }
 
 #myH1 {
-    font-size: 4rem;
-    font-family: Arial, sans-serif;
-    color: hsl(0, 0%, 25%);
+    font-family: 'Inter', sans-serif;
+    font-size: 3.5rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 3rem;
+    text-align: center;
 }
 
 #container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 30px;
-    border: 5px solid;
-    border-radius: 50px;
-    background-color: white;
+    padding: 3rem 2.5rem;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    transition: transform 0.2s ease;
+}
+
+#container:hover {
+    transform: translateY(-2px);
 }
 
 #display {
-    font-size: 5rem;
-    font-family: monospace;
-    font-weight: bold;
-    color: hsl(0, 0%, 30%);
-    text-shadow: 2px 2px 2px hsla(0, 0%, 0%, 0.75);
-    margin-bottom: 25px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 4.5rem;
+    font-weight: 700;
+    color: #64ffda;
+    margin-bottom: 2.5rem;
+    padding: 1.2rem 2rem;
+    background: rgba(100, 255, 218, 0.1);
+    border: 2px solid rgba(100, 255, 218, 0.3);
+    border-radius: 15px;
+    text-align: center;
+    min-width: 350px;
+    transition: all 0.3s ease;
+}
+
+#display:hover {
+    border-color: rgba(100, 255, 218, 0.5);
+    box-shadow: 0 0 20px rgba(100, 255, 218, 0.2);
+}
+
+#controls {
+    display: flex;
+    gap: 1.5rem;
 }
 
 #controls button {
-    font-size: 1.5rem;
-    font-weight: bold;
-    padding: 10px 20px;
-    margin: 5px;
-    min-width: 125px;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 1rem 1.8rem;
+    min-width: 120px;
     border: none;
-    border-radius: 10px;
+    border-radius: 12px;
     cursor: pointer;
     color: white;
-    transition: background-color 0.5s ease;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+#controls button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+
+#controls button:active {
+    transform: translateY(0);
+    transition: transform 0.1s;
 }
 
 #startBtn {
-    background-color: hsl(115, 100%, 40%);
+    background: linear-gradient(135deg, #22c55e, #16a34a);
 }
 
 #startBtn:hover {
-    background-color: hsl(115, 100%, 30%);
+    background: linear-gradient(135deg, #16a34a, #15803d);
 }
 
 #stopBtn {
-    background-color: hsl(10, 90%, 50%);
+    background: linear-gradient(135deg, #ef4444, #dc2626);
 }
 
 #stopBtn:hover {
-    background-color: hsl(10, 90%, 40%);
+    background: linear-gradient(135deg, #dc2626, #b91c1c);
 }
 
 #resetBtn {
-    background-color: hsl(205, 90%, 60%);
+    background: linear-gradient(135deg, #3b82f6, #2563eb);
 }
 
 #resetBtn:hover {
-    background-color: hsl(205, 90%, 50%);
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
 }
