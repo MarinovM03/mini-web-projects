@@ -120,7 +120,7 @@ function selectAnswer(e) {
     Array.from(answersContainer.children).forEach(button => {
         if (button.dataset.correct === 'true') {
             button.classList.add('correct');
-        } else {
+        } else if (button === selectedBtn) {
             button.classList.add('incorrect');
         }
     })
@@ -163,5 +163,7 @@ function showResults() {
 }
 
 function restartQuiz(e) {
+    resultScreen.classList.remove('active');
     
+    startQuiz();
 }
