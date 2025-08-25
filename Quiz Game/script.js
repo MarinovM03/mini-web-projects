@@ -148,40 +148,41 @@ function showQuestion() {
 }
 
 function selectAnswer(e) {
-    if (answersDisabled) return;
+  if (answersDisabled) return;
 
-    answersDisabled = true;
+  answersDisabled = true;
+  const selectedBtn = e.target;
+  const isCorrect = selectedBtn.dataset.correct === 'true';
 
-    const selectedBtn = e.target;
-    const isCorrect = selectedBtn.dataset.correct === 'true';
+  selectedBtn.classList.add('selected');
 
-    Array.from(answersContainer.children).forEach(button => {
-        if (button.dataset.correct === 'true') {
-            button.classList.add('correct');
-        } else if (button === selectedBtn) {
-            button.classList.add('incorrect');
-        }
-    })
+  const allButtons = answersContainer.querySelectorAll('.answer-btn');
+  allButtons.forEach(button => {
+    button.disabled = true;
+  });
+
+  setTimeout(() => {
+    allButtons.forEach(button => {
+      button.classList.remove('selected');
+      
+      if (button.dataset.correct === 'true') {
+        button.classList.add('correct');
+      } else if (button === selectedBtn && !isCorrect) {
+        button.classList.add('incorrect');
+      }
+    });
 
     if (isCorrect) {
-        score++;
-        scoreSpan.textContent = score;
+      score++;
+      scoreSpan.textContent = score;
     }
     
     setTimeout(() => {
-        currentQuestionIndex++;
-
-        if (currentQuestionIndex < quizQuestions.length) {
-            showQuestion();
-        } else {
-            showResults();
-        }
-    }, 1000);
+      nextQuestion();
+    }, 1500);
+  }, 300);
 }
 
-function showResults() {
-    quizScreen.classList.remove('active');
-    resultScreen.classList.add('active');
 
     finalScoreSpan.textContent = score;
 
