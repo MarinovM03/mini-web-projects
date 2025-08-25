@@ -122,30 +122,16 @@ function startQuiz() {
 }
 
 function showQuestion() {
-    answersDisabled = false;
+  answersDisabled = false;
+  const currentQuestion = selectedQuestions[currentQuestionIndex];
 
-    const currentQuestion = quizQuestions[currentQuestionIndex];
+  currentQuestionSpan.textContent = currentQuestionIndex + 1;
+  questionText.textContent = currentQuestion.question;
+  
+  // Update progress bar
+  const progressPercent = ((currentQuestionIndex + 1) / selectedQuestions.length) * 100;
+  progressBar.style.width = progressPercent + '%';
 
-    currentQuestionSpan.textContent = currentQuestionIndex + 1;
-
-    const progressPercent = (currentQuestionIndex / quizQuestions.length) * 100;
-    progressBar.style.width = progressPercent + '%';
-
-    questionText.textContent = currentQuestion.question;
-
-    answersContainer.innerHTML = '';
-
-    currentQuestion.answers.forEach(answer => {
-        const button = document.createElement('button');
-        button.textContent = answer.text;
-        button.classList.add('answer-btn');
-        
-        button.dataset.correct = answer.correct;
-
-        button.addEventListener('click', selectAnswer);
-
-        answersContainer.appendChild(button);
-    })
 }
 
 function selectAnswer(e) {
