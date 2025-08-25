@@ -8,15 +8,15 @@
 </head>
 <body>
     <div class="container">
-
+        <!-- Start Screen -->
         <div class="screen active" id="start-screen">
-            <h1>Quiz Time!</h1>
+            <h1>🧠 Quiz Time!</h1>
             <p>Test your knowledge with these fun questions</p>
             <button id="start-btn">Start Quiz</button>
         </div>
  
+        <!-- Quiz Screen -->
         <div class="screen" id="quiz-screen">
-
             <div class="quiz-header">
                 <h2 id="question-text">Question text goes here</h2>
                 <div class="quiz-info">
@@ -38,14 +38,15 @@
             </div>
         </div>
 
+        <!-- Result Screen -->
         <div class="screen" id="result-screen">
-            <h1>Quiz Results</h1>
+            <h1>🎉 Quiz Results</h1>
             <div class="result-info">
-                <p>You scored <span id="final-score">0</span> our of <span id="max-score">5</span></p>
-
+                <p>You scored <span id="final-score">0</span> out of <span id="max-score">5</span></p>
+                <p>Percentage: <span id="percentage">0%</span></p>
                 <div id="result-message">Good job!</div>
             </div>
-            <button id="restart-btn">Restart Quiz</button>
+            <button id="restart-btn">Play Again</button>
         </div>
     </div>
 
