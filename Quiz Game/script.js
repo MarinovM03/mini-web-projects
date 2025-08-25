@@ -108,15 +108,17 @@ function initializeQuiz() {
 startButton.addEventListener('click', startQuiz);
 restartButton.addEventListener('click', restartQuiz);
 
-function startQuiz(e) {
-    currentQuestionIndex = 0;
-    score = 0;
-    scoreSpan.textContent = 0;
+function startQuiz() {
+  currentQuestionIndex = 0;
+  score = 0;
+  scoreSpan.textContent = 0;
 
-    startScreen.classList.remove('active');
+  startScreen.classList.remove('active');
+  setTimeout(() => {
     quizScreen.classList.add('active');
-
-    showQuestion();
+  }, 150);
+  
+  showQuestion();
 }
 
 function showQuestion() {
