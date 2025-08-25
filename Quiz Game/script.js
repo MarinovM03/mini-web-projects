@@ -93,9 +93,17 @@ const quizQuestions = [
 let currentQuestionIndex = 0;
 let score = 0;
 let answersDisabled = false;
+let selectedQuestions = [];
 
-totalQuestionsSpan.textContent = quizQuestions.length;
-maxScoreSpan.textContent = quizQuestions.length;
+function shuffleArray(array) {
+  return [...array].sort(() => Math.random() - 0.5);
+}
+
+function initializeQuiz() {
+  selectedQuestions = shuffleArray([...quizQuestions]).slice(0, 5);
+  totalQuestionsSpan.textContent = selectedQuestions.length;
+  maxScoreSpan.textContent = selectedQuestions.length;
+}
 
 startButton.addEventListener('click', startQuiz);
 restartButton.addEventListener('click', restartQuiz);
