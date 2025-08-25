@@ -132,6 +132,19 @@ function showQuestion() {
   const progressPercent = ((currentQuestionIndex + 1) / selectedQuestions.length) * 100;
   progressBar.style.width = progressPercent + '%';
 
+  answersContainer.innerHTML = '';
+  
+  // Shuffle answers and create buttons
+  const shuffledAnswers = shuffleArray([...currentQuestion.answers]);
+
+  shuffledAnswers.forEach((answer) => {
+    const button = document.createElement('button');
+    button.textContent = answer.text;
+    button.classList.add('answer-btn');
+    button.dataset.correct = answer.correct;
+    button.addEventListener('click', selectAnswer);
+    answersContainer.appendChild(button);
+  });
 }
 
 function selectAnswer(e) {
