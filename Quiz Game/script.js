@@ -9,6 +9,7 @@ const totalQuestionsSpan = document.getElementById("total-questions");
 const scoreSpan = document.getElementById("score");
 const finalScoreSpan = document.getElementById("final-score");
 const maxScoreSpan = document.getElementById("max-score");
+const percentageSpan = document.getElementById("percentage");
 const resultMessage = document.getElementById("result-message");
 const restartButton = document.getElementById("restart-btn");
 const progressBar = document.getElementById("progress");
@@ -60,6 +61,33 @@ const quizQuestions = [
       { text: "Ag", correct: false },
     ],
   },
+  {
+    question: "Which year did World War II end?",
+    answers: [
+      { text: "1944", correct: false },
+      { text: "1945", correct: true },
+      { text: "1946", correct: false },
+      { text: "1947", correct: false },
+    ],
+  },
+  {
+    question: "What is the smallest unit of matter?",
+    answers: [
+      { text: "Molecule", correct: false },
+      { text: "Atom", correct: true },
+      { text: "Cell", correct: false },
+      { text: "Electron", correct: false },
+    ],
+  },
+  {
+    question: "Which continent is the largest?",
+    answers: [
+      { text: "Africa", correct: false },
+      { text: "Asia", correct: true },
+      { text: "North America", correct: false },
+      { text: "Europe", correct: false },
+    ],
+  }
 ];
 
 let currentQuestionIndex = 0;
