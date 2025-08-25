@@ -216,10 +216,12 @@ function showResults() {
   }
 }
 
+function restartQuiz() {
+  initializeQuiz();
+  resultScreen.classList.remove('active');
+  setTimeout(() => {
+    startScreen.classList.add('active');
+  }, 150);
 }
 
-function restartQuiz(e) {
-    resultScreen.classList.remove('active');
-    
-    startQuiz();
-}
+document.addEventListener('DOMContentLoaded', initializeQuiz);
