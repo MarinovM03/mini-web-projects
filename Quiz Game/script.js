@@ -179,7 +179,7 @@ function selectAnswer(e) {
     
     setTimeout(() => {
       nextQuestion();
-    }, 1500);
+    }, 1000);
   }, 300);
 }
 
