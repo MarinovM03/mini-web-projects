@@ -183,10 +183,16 @@ function selectAnswer(e) {
   }, 300);
 }
 
+function nextQuestion() {
+  currentQuestionIndex++;
 
-    finalScoreSpan.textContent = score;
+  if (currentQuestionIndex < selectedQuestions.length) {
+    showQuestion();
+  } else {
+    showResults();
+  }
+}
 
-    const percentage = (score / quizQuestions.length) * 100;
 
     if (percentage === 100) {
         resultMessage.textContent = "Perfect! You're a genius!";
