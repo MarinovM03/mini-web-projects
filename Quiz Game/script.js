@@ -193,18 +193,29 @@ function nextQuestion() {
   }
 }
 
+function showResults() {
+  quizScreen.classList.remove('active');
+  setTimeout(() => {
+    resultScreen.classList.add('active');
+  }, 150);
+  
+  finalScoreSpan.textContent = score;
+  const percentage = Math.round((score / selectedQuestions.length) * 100);
+  percentageSpan.textContent = percentage + '%';
 
-    if (percentage === 100) {
-        resultMessage.textContent = "Perfect! You're a genius!";
-    } else if (percentage >= 80) {
-        resultMessage.textContent = "Great job! You know your stuff!";
-    } else if (percentage >= 60) {
-        resultMessage.textContent = "Good effort! Keep learning!";
-    } else if (percentage >= 40) {
-        resultMessage.textContent = "Not bad! Try again to improve!";
-    } else {
-        resultMessage.textContent = "Keep studying! You'll get better!";
-    }
+  if (percentage === 100) {
+    resultMessage.textContent = "Perfect! 🎯 You're a quiz master!";
+  } else if (percentage >= 80) {
+    resultMessage.textContent = "Great job! 🎉 You know your stuff!";
+  } else if (percentage >= 60) {
+    resultMessage.textContent = "Good work! 👍 Keep it up!";
+  } else if (percentage >= 40) {
+    resultMessage.textContent = "Not bad! 🤔 Room for improvement!";
+  } else {
+    resultMessage.textContent = "Keep trying! 🌱 Practice makes perfect!";
+  }
+}
+
 }
 
 function restartQuiz(e) {
