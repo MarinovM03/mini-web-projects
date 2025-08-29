@@ -26,4 +26,14 @@ h1 {
     font-size: 2rem;
 }
 
+.board {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 20px;
+}
+
 }
