@@ -12,3 +12,18 @@ body {
     align-items: center;
     min-height: 100vh;
 }
+
+.container {
+    text-align: center;
+    width: 100%;
+    padding: 1.2rem;
+}
+
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+}
