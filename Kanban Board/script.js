@@ -71,3 +71,18 @@ function hideAddCardModal() {
     currentListId = null;
 }
 
+function saveCard() {
+    const input = document.getElementById('card-text-input');
+    const cardText = input.value.trim();
+    
+    if (cardText === '') {
+        alert('Please enter card text');
+        return;
+    }
+    
+    if (currentListId) {
+        createCard(cardText, currentListId);
+        hideAddCardModal();
+    }
+}
+
