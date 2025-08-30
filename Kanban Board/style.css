@@ -1,65 +1,97 @@
 * {
-    padding: 0;
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
 body {
-    font-family: sans-serif;
-    background-color: #f8f9fc;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     min-height: 100vh;
+    padding: 20px;
 }
 
 .container {
-    text-align: center;
-    width: 100%;
-    padding: 1.2rem;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-
 h1 {
-    color: #333;
-    margin-bottom: 20px;
-    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 40px;
+    color: white;
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .board {
     display: flex;
-    justify-content: space-around;
-    align-items: flex-start;
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    gap: 20px;
+    justify-content: center;
+    gap: 25px;
 }
 
 .list {
-    background-color: #e3e4e8;
-    padding: 1rem;
-    border-radius: 8px;
-    width: 30%;
-    min-height: 400px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    background: rgba(255, 255, 255, 0.95);
+    width: 320px;
+    min-height: 500px;
+    padding: 20px;
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.list-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #e0e6ed;
 }
 
 .list h2 {
-    color: #555;
-    margin-bottom: 1rem;
-    font-size: 1.5rem;
+    color: #2d3748;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.add-card-btn {
+    background: linear-gradient(45deg, #4facfe 0%, #00f2fe 100%);
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: transform 0.2s;
+}
+
+.add-card-btn:hover {
+    transform: translateY(-2px);
+}
+
+.cards-container {
+    min-height: 400px;
+}
+
+.cards-container.drag-over {
+    background: rgba(79, 172, 254, 0.1);
+    border-radius: 8px;
+    border: 2px dashed #4facfe;
 }
 
 .card {
-    background-color: white;
-    color: #333;
-    padding: 1rem;
-    margin-bottom: 10px;
+    background: white;
+    padding: 15px;
+    margin-bottom: 12px;
     border-radius: 8px;
     cursor: grab;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-    transition: transform 0.2s, box-shadow 0.2s;
+    position: relative;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    border-left: 4px solid #4facfe;
+    transition: all 0.2s ease;
+}
 }
 
 .card:active {
