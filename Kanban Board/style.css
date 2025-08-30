@@ -92,14 +92,37 @@ h1 {
     border-left: 4px solid #4facfe;
     transition: all 0.2s ease;
 }
+
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
 }
 
 .card:active {
     cursor: grabbing;
-    transform: scale(1.05);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-.list.over {
-    background-color: #d1d3d8;
+.card.dragging {
+    opacity: 0.7;
+    transform: rotate(3deg);
+}
+
+.delete-card-btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background: linear-gradient(45deg, #ff6b6b, #ff5252);
+    color: white;
+    border: none;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
 }
