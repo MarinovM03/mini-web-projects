@@ -33,3 +33,25 @@ function setupAddCardButtons() {
     }
 }
 
+function setupModal() {
+    const modal = document.getElementById('add-card-modal');
+    const saveBtn = document.getElementById('save-card-btn');
+    const cancelBtn = document.getElementById('cancel-card-btn');
+    const input = document.getElementById('card-text-input');
+    
+    saveBtn.addEventListener('click', saveCard);
+    cancelBtn.addEventListener('click', hideAddCardModal);
+    
+    input.addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') {
+            saveCard();
+        }
+    });
+    
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && modal.style.display === 'flex') {
+            hideAddCardModal();
+        }
+    });
+}
+
