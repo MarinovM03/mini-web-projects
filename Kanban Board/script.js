@@ -86,3 +86,35 @@ function saveCard() {
     }
 }
 
+function createCard(text, listId) {
+    const cardId = 'card-' + cardIdCounter++;
+    const cardsContainer = document.querySelector(`#${listId} .cards-container`);
+    
+    const card = document.createElement('div');
+    card.className = 'card';
+    card.draggable = true;
+    card.id = cardId;
+    card.textContent = text;
+    
+    card.addEventListener('dragstart', dragStart);
+    card.addEventListener('dragend', dragEnd);
+    
+    const deleteBtn = document.createElement('button');
+    deleteBtn.className = 'delete-card-btn';
+    deleteBtn.textContent = '×';
+    deleteBtn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        deleteCard(cardId);
+    });
+    
+    card.appendChild(deleteBtn);
+    cardsContainer.appendChild(card);
+}
+
+function deleteCard(cardId) {
+    const card = document.getElementById(cardId);
+    if (card && confirm('Are you sure you want to delete this card?')) {
+        card.remove();
+    }
+}
+
