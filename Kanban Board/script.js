@@ -55,3 +55,19 @@ function setupModal() {
     });
 }
 
+function showAddCardModal(listId) {
+    currentListId = listId;
+    const modal = document.getElementById('add-card-modal');
+    const input = document.getElementById('card-text-input');
+    
+    modal.style.display = 'flex';
+    input.value = '';
+    input.focus();
+}
+
+function hideAddCardModal() {
+    const modal = document.getElementById('add-card-modal');
+    modal.style.display = 'none';
+    currentListId = null;
+}
+
