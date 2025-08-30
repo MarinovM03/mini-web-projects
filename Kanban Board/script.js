@@ -118,3 +118,38 @@ function deleteCard(cardId) {
     }
 }
 
+function dragStart(e) {
+    e.dataTransfer.setData('text/plain', this.id);
+    this.classList.add('dragging');
+}
+
+function dragEnd() {
+    this.classList.remove('dragging');
+}
+
+function dragOver(e) {
+    e.preventDefault();
+}
+
+function dragEnter(e) {
+    e.preventDefault();
+    this.classList.add('drag-over');
+}
+
+function dragLeave(e) {
+    if (!this.contains(e.relatedTarget)) {
+        this.classList.remove('drag-over');
+    }
+}
+
+function dragDrop(e) {
+    e.preventDefault();
+    
+    const cardId = e.dataTransfer.getData('text/plain');
+    const card = document.getElementById(cardId);
+    
+    if (card && this.classList.contains('cards-container')) {
+        this.appendChild(card);
+        this.classList.remove('drag-over');
+    }
+}
