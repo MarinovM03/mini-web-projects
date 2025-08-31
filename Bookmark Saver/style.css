@@ -156,3 +156,14 @@ button:active {
     background: linear-gradient(135deg, #e84393, #fd79a8);
 }
 
+.empty-message {
+    color: #666;
+    text-align: center;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 15px;
+    border: 2px dashed rgba(255, 107, 107, 0.3);
+    margin-top: 15px;
+    font-size: 16px;
+    font-weight: 500;
+}
