@@ -70,3 +70,22 @@ function addBookmarkToDisplay(name, url) {
     bookmarkList.appendChild(li);
 }
 
+function removeBookmark(listItem, name, url) {
+    if (confirm(`Are you sure you want to remove "${name}"?`)) {
+        bookmarkList.removeChild(listItem);
+        removeBookmarkFromStorage(name, url);
+        updateEmptyMessage();
+    }
+}
+
+function getBookmarksFromStorage() {
+    const bookmarks = localStorage.getItem('bookmarks');
+    return bookmarks ? JSON.parse(bookmarks) : [];
+}
+
+function saveBookmarkToStorage(name, url) {
+    const bookmarks = getBookmarksFromStorage();
+    bookmarks.push({ name, url });
+    localStorage.setItem('bookmarks', JSON.stringify(bookmarks));
+}
+
