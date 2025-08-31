@@ -107,3 +107,9 @@ function removeBookmarkFromStorage(name, url) {
     localStorage.setItem('bookmarks', JSON.stringify(bookmarks));
 }
 
+function clearInputs() {
+    bookmarkNameInput.value = '';
+    bookmarkUrlInput.value = '';
+    bookmarkNameInput.focus();
+}
+
