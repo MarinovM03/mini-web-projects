@@ -113,3 +113,7 @@ function clearInputs() {
     bookmarkNameInput.focus();
 }
 
+function updateEmptyMessage() {
+    const hasBookmarks = bookmarkList.children.length > 0;
+    emptyMessage.style.display = hasBookmarks ? 'none' : 'block';
+}
