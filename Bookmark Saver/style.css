@@ -71,3 +71,25 @@ input::placeholder {
     font-weight: 400;
 }
 
+button {
+    padding: 15px 25px;
+    background: linear-gradient(135deg, #ff6b6b, #4ecdc4);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
+}
+
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(255, 107, 107, 0.4);
+}
+
+button:active {
+    transform: translateY(-1px);
+}
+
