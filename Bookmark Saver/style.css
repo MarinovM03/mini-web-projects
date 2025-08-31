@@ -139,3 +139,20 @@ button:active {
     text-decoration: underline;
 }
 
+.remove-btn {
+    background: linear-gradient(135deg, #ff7675, #fd79a8);
+    padding: 10px 18px;
+    font-size: 14px;
+    font-weight: 600;
+    flex-shrink: 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(255, 118, 117, 0.3);
+    transition: all 0.3s ease;
+}
+
+.remove-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 118, 117, 0.4);
+    background: linear-gradient(135deg, #e84393, #fd79a8);
+}
+
