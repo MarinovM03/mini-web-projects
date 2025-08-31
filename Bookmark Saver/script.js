@@ -40,3 +40,33 @@ function isValidUrl(url) {
     return url.startsWith('http://') || url.startsWith('https://');
 }
 
+function bookmarkExists(name, url) {
+    const bookmarks = getBookmarksFromStorage();
+    return bookmarks.some(bookmark => 
+        bookmark.name.toLowerCase() === name.toLowerCase() || 
+        bookmark.url === url
+    );
+}
+
+function addBookmarkToDisplay(name, url) {
+    const li = document.createElement('li');
+    li.className = 'bookmark-item';
+
+    const link = document.createElement('a');
+    link.href = url;
+    link.textContent = name;
+    link.target = '_blank';
+
+    const removeBtn = document.createElement('button');
+    removeBtn.textContent = 'Remove';
+    removeBtn.className = 'remove-btn';
+
+    removeBtn.addEventListener('click', function() {
+        removeBookmark(li, name, url);
+    });
+
+    li.appendChild(link);
+    li.appendChild(removeBtn);
+    bookmarkList.appendChild(li);
+}
+
