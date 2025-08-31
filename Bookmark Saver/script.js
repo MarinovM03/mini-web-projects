@@ -89,3 +89,21 @@ function saveBookmarkToStorage(name, url) {
     localStorage.setItem('bookmarks', JSON.stringify(bookmarks));
 }
 
+function loadBookmarks() {
+    const bookmarks = getBookmarksFromStorage();
+    
+    bookmarks.forEach(bookmark => {
+        addBookmarkToDisplay(bookmark.name, bookmark.url);
+    });
+    
+    updateEmptyMessage();
+}
+
+function removeBookmarkFromStorage(name, url) {
+    let bookmarks = getBookmarksFromStorage();
+    bookmarks = bookmarks.filter(bookmark => 
+        bookmark.name !== name || bookmark.url !== url
+    );
+    localStorage.setItem('bookmarks', JSON.stringify(bookmarks));
+}
+
