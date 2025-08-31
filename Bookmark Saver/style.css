@@ -93,3 +93,49 @@ button:active {
     transform: translateY(-1px);
 }
 
+.bookmarks-container {
+    text-align: left;
+}
+
+#bookmark-list {
+    list-style: none;
+    padding: 0;
+}
+
+.bookmark-item {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.bookmark-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 1);
+}
+
+.bookmark-item a {
+    background: linear-gradient(135deg, #ff6b6b, #4ecdc4);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-decoration: none;
+    font-weight: 600;
+    flex-grow: 1;
+    text-align: left;
+    padding-right: 15px;
+    word-break: break-word;
+    font-size: 16px;
+}
+
+.bookmark-item a:hover {
+    text-decoration: underline;
+}
+
