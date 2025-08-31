@@ -7,16 +7,21 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
     <div class="app-container">
         <h1>Bookmark Saver</h1>
+        
         <div class="input-container">
-            <input type="text" id="bookmark-name" placeholder="Bookmark Name">
-            <input type="url" id="bookmark-url" placeholder="Bookmark URL">
+            <input type="text" id="bookmark-name" placeholder="Enter bookmark name" required>
+            <input type="url" id="bookmark-url" placeholder="Enter bookmark URL (https://...)" required>
             <button id="add-bookmark">Add Bookmark</button>
         </div>
 
-        <ul id="bookmark-list"></ul>
+        <div class="bookmarks-container">
+            <ul id="bookmark-list"></ul>
+            <p id="empty-message" class="empty-message" style="display: none;">
+                No bookmarks saved yet. Add your first bookmark above!
+            </p>
+        </div>
     </div>
     
     <script src="script.js"></script>
