@@ -36,3 +36,7 @@ function handleAddBookmark() {
     updateEmptyMessage();
 }
 
+function isValidUrl(url) {
+    return url.startsWith('http://') || url.startsWith('https://');
+}
+
