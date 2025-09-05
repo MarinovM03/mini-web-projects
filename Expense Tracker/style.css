@@ -40,3 +40,18 @@ h2 {
     font-weight: 500;
 }
 
+.balance-container {
+    text-align: center;
+    margin-bottom: 35px;
+    padding: 24px;
+    background: linear-gradient(135deg, #a8d5ba, #6b8e23);
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.balance-container h1 {
+    font-size: 3rem;
+    margin: 15px 0;
+    margin-bottom: 20px;
+}
+
