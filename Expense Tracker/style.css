@@ -4,3 +4,14 @@
     box-sizing: border-box;
 }
 
+body {
+    background: linear-gradient(135deg, #2e8b57, #a8d5ba);
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    color: #2d3436;
+}
+
