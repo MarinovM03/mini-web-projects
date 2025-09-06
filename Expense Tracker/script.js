@@ -5,3 +5,11 @@ const transactionListEl = document.getElementById("transaction-list");
 const transactionFormEl = document.getElementById("transaction-form");
 const descriptionEl = document.getElementById("description");
 const amountEl = document.getElementById("amount");
+
+let transactions = getTransactionsFromStorage();
+let currentType = 'income';
+
+document.addEventListener('DOMContentLoaded', function() {
+    init();
+});
+
