@@ -45,9 +45,16 @@
                     </div>
 
                     <div class="form-group">
+                        <label for="type">Type</label>
+                        <div class="type-toggle">
+                            <button type="button" id="income-btn" class="type-btn active">Income</button>
+                            <button type="button" id="expense-btn" class="type-btn">Expense</button>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
                         <label for="amount">Amount</label>
                         <input type="number" step="0.01" id="amount" placeholder="Enter amount..." required>
-                        <small>Use negative (-) for expenses</small>
                     </div>
 
                     <button type="submit">Add Transaction</button>
