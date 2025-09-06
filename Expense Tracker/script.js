@@ -34,3 +34,18 @@ function setupEventListeners() {
     };
 }
 
+function setTransactionType(type) {
+    currentType = type;
+    
+    const incomeBtn = document.getElementById('income-btn');
+    const expenseBtn = document.getElementById('expense-btn');
+    
+    if (type === 'income') {
+        incomeBtn.classList.add('active');
+        expenseBtn.classList.remove('active');
+    } else {
+        expenseBtn.classList.add('active');
+        incomeBtn.classList.remove('active');
+    }
+}
+
