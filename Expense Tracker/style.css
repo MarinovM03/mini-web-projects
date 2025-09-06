@@ -53,6 +53,7 @@ h2 {
     font-size: 3rem;
     margin: 15px 0;
     margin-bottom: 20px;
+    color: white;
 }
 
 .summary {
@@ -66,5 +67,45 @@ h2 {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 24px;
+}
+
+.income, .expenses {
+    background-color: white;
+    padding: 24px;
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease;
+}
+
+.income:hover,
+.expenses:hover {
+    transform: translateY(-2px);
+}
+
+.income h3 {
+    color: #059669;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.expenses h3 {
+    color: #dc2626;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.income p,
+.expenses p {
+    margin-top: 8px;
+    font-size: 1.75rem;
+    font-weight: 600;
+}
+
+.income p {
+    color: #059669;
+}
+
+.expenses p {
+    color: #dc2626;
 }
 
