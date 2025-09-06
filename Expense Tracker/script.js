@@ -84,3 +84,10 @@ function addTransaction(description, amount) {
     updateSummary();
 }
 
+function removeTransaction(id) {
+    transactions = transactions.filter(transaction => transaction.id !== id);
+    saveTransactionsToStorage();
+    updateTransactionList();
+    updateSummary();
+}
+
