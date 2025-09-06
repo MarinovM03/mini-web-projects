@@ -115,3 +115,27 @@ h2 {
     flex-direction: column;
 }
 
+#transaction-list {
+    list-style: none;
+    max-height: 500px;
+    overflow-y: auto;
+    padding-right: 8px;
+    flex-grow: 1;
+}
+
+#transaction-list::-webkit-scrollbar {
+    width: 8px;
+}
+
+#transaction-list::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+    border-radius: 4px;
+}
+#transaction-list::-webkit-scrollbar-thumb {
+    background-color: #cbd5e0;
+    border-radius: 4px;
+}
+#transaction-list::-webkit-scrollbar-thumb:hover {
+    background-color: #a0aec0;
+}
+
