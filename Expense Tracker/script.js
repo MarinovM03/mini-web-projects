@@ -19,3 +19,18 @@ function init() {
     updateSummary();
 }
 
+function setupEventListeners() {
+    transactionFormEl.addEventListener('submit', handleFormSubmit);
+    
+    const incomeBtn = document.getElementById('income-btn');
+    const expenseBtn = document.getElementById('expense-btn');
+    
+    incomeBtn.onclick = function() {
+        setTransactionType('income');
+    };
+    
+    expenseBtn.onclick = function() {
+        setTransactionType('expense');
+    };
+}
+
