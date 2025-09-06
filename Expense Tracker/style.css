@@ -210,3 +210,13 @@ h2 {
     transform: scale(1.1);
 }
 
+.empty-message {
+    text-align: center;
+    color: #718096;
+    font-style: italic;
+    padding: 2rem;
+    background-color: #f7fafc;
+    border-radius: 12px;
+    border: 2px dashed #cbd5e0;
+}
+
