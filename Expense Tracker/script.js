@@ -71,3 +71,16 @@ function handleFormSubmit(e) {
     resetForm();
 }
 
+function addTransaction(description, amount) {
+    const transaction = {
+        id: generateId(),
+        description: description,
+        amount: amount,
+    };
+
+    transactions.push(transaction);
+    saveTransactionsToStorage();
+    updateTransactionList();
+    updateSummary();
+}
+
