@@ -309,3 +309,10 @@ input:hover {
     border-color: #cbd5e0;
 }
 
+small {
+    color: #718096;
+    font-size: 0.875rem;
+    margin-top: 4px;
+    display: block;
+}
+
