@@ -271,3 +271,21 @@ label {
     background-color: #edf2f7;
 }
 
+#income-btn.active {
+    background: linear-gradient(135deg, #059669, #10b981);
+    color: white;
+    border-color: #059669;
+    box-shadow: 0 4px 12px rgba(5, 150, 105, 0.2);
+}
+
+#expense-btn.active {
+    background: linear-gradient(135deg, #dc2626, #ef4444);
+    color: white;
+    border-color: #dc2626;
+    box-shadow: 0 4px 12px rgba(220, 38, 38, 0.2);
+}
+
+.type-btn.active:hover {
+    transform: translateY(-1px);
+}
+
