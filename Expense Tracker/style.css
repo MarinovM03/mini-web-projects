@@ -247,3 +247,9 @@ label {
     font-weight: 500;
 }
 
+.type-toggle {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
