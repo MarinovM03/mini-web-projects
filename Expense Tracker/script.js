@@ -49,3 +49,25 @@ function setTransactionType(type) {
     }
 }
 
+function handleFormSubmit(e) {
+    e.preventDefault();
+
+    const description = descriptionEl.value.trim();
+    const amount = parseFloat(amountEl.value);
+
+    if (!description) {
+        alert('Please enter a description');
+        return;
+    }
+
+    if (isNaN(amount) || amount <= 0) {
+        alert('Please enter a valid positive amount');
+        return;
+    }
+
+    const finalAmount = currentType === 'expense' ? -Math.abs(amount) : Math.abs(amount);
+        
+    addTransaction(description, finalAmount);
+    resetForm();
+}
+
