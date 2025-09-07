@@ -91,3 +91,19 @@ function removeTransaction(id) {
     updateSummary();
 }
 
+function updateTransactionList() {
+    transactionListEl.innerHTML = '';
+
+    if (transactions.length === 0) {
+        displayEmptyMessage();
+        return;
+    }
+
+    const sortedTransactions = [...transactions].reverse();
+
+    sortedTransactions.forEach((transaction) => {
+        const transactionEl = createTransactionElement(transaction);
+        transactionListEl.appendChild(transactionEl);
+    });
+}
+
