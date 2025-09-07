@@ -171,3 +171,11 @@ function resetForm() {
     transactionFormEl.reset();
 }
 
+function getTransactionsFromStorage() {
+    const stored = localStorage.getItem('transactions');
+    return stored ? JSON.parse(stored) : [];
+}
+
+function saveTransactionsToStorage() {
+    localStorage.setItem('transactions', JSON.stringify(transactions));
+}
