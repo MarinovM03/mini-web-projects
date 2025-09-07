@@ -107,3 +107,10 @@ function updateTransactionList() {
     });
 }
 
+function displayEmptyMessage() {
+    const emptyMessage = document.createElement('li');
+    emptyMessage.classList.add('empty-message');
+    emptyMessage.textContent = 'No transactions yet. Add one above!';
+    transactionListEl.appendChild(emptyMessage);
+}
+
