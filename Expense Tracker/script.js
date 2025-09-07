@@ -114,3 +114,19 @@ function displayEmptyMessage() {
     transactionListEl.appendChild(emptyMessage);
 }
 
+function createTransactionElement(transaction) {
+    const li = document.createElement('li');
+    li.classList.add('transaction');
+    li.classList.add(transaction.amount > 0 ? 'income' : 'expense');
+
+    li.innerHTML = `
+        <span class="transaction-description">${transaction.description}</span>
+        <span class="transaction-amount">
+            ${formatCurrency(transaction.amount)}
+            <button class="delete-btn" onclick="removeTransaction(${transaction.id})">×</button>
+        </span>
+    `;
+
+    return li;
+}
+
