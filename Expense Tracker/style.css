@@ -340,3 +340,30 @@ button[type="submit"]:active {
     transform: translateY(0);
 }
 
+@media (max-width: 768px) {
+    .container {
+        padding: 1.5rem;
+    }
+    
+    .main-content {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .summary {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+    
+    h1 {
+        font-size: 1.8rem;
+    }
+    
+    .balance-container h1 {
+        font-size: 2.5rem;
+    }
+    
+    .type-toggle {
+        flex-direction: column;
+    }
+}
