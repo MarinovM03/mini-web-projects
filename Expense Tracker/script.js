@@ -163,3 +163,11 @@ function formatCurrency(amount) {
     }).format(amount);
 }
 
+function generateId() {
+    return Date.now();
+}
+
+function resetForm() {
+    transactionFormEl.reset();
+}
+
