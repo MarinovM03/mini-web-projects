@@ -140,3 +140,19 @@ function updateSummary() {
     expenseAmountEl.textContent = formatCurrency(Math.abs(expenses));
 }
 
+function calculateBalance() {
+    return transactions.reduce((total, transaction) => total + transaction.amount, 0);
+}
+
+function calculateIncome() {
+    return transactions
+        .filter(transaction => transaction.amount > 0)
+        .reduce((total, transaction) => total + transaction.amount, 0);
+}
+
+function calculateExpenses() {
+    return transactions
+        .filter(transaction => transaction.amount < 0)
+        .reduce((total, transaction) => total + transaction.amount, 0);
+}
+
