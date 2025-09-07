@@ -130,3 +130,13 @@ function createTransactionElement(transaction) {
     return li;
 }
 
+function updateSummary() {
+    const balance = calculateBalance();
+    const income = calculateIncome();
+    const expenses = calculateExpenses();
+
+    balanceEl.textContent = formatCurrency(balance);
+    incomeAmountEl.textContent = formatCurrency(income);
+    expenseAmountEl.textContent = formatCurrency(Math.abs(expenses));
+}
+
