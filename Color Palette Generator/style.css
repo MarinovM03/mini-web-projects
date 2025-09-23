@@ -17,4 +17,13 @@ body {
     padding: 20px;
 }
 
+.container {
+    background-color: white;
+    border-radius: 1rem;
+    padding: 2rem;
+    width: 100%;
+    max-width: 800px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
 }
