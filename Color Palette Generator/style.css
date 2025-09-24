@@ -84,4 +84,7 @@ h1:after {
     transform: translateY(-5px);
 }
 
+.color {
+    height: 120px;
+    cursor: pointer;
 }
