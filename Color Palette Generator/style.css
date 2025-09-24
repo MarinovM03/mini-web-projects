@@ -67,4 +67,10 @@ h1:after {
     transform: translateY(0);
 }
 
+.palette-container {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+}
+
 }
