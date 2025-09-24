@@ -80,4 +80,8 @@ h1:after {
     transition: transform 0.2s;
 }
 
+.color-box:hover {
+    transform: translateY(-5px);
+}
+
 }
