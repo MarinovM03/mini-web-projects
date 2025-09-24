@@ -45,3 +45,15 @@ h1:after {
     background-color: #667eea;
     border-radius: 2px;
 }
+
+#generate-btn {
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 500;
+    margin-bottom: 2rem;
+    font-size: 1rem;
+}
