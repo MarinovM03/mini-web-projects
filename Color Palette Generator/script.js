@@ -9,6 +9,10 @@ function generatePalette() {
     for (let i = 0; i < 5; i++) {
         colors.push(generateRandomColor());
     }
+
+    updatePaletteDisplay(colors);
+}
+
 function generateRandomColor() {
     const letters = '0123456789ABCDEF';
     let color = '#';
@@ -20,4 +24,17 @@ function generateRandomColor() {
     return color;
 }
 
-generatePalette();
+function updatePaletteDisplay(colors) {
+    const colorBoxes = document.querySelectorAll('.color-box');
+
+    colorBoxes.forEach((box, index) => {
+        const color = colors[index];
+        const colorDiv = box.querySelector('.color');
+        const hexValue = box.querySelector('.hex-value');
+
+        colorDiv.style.backgroundColor = color;
+        hexValue.textContent = color;
+    });
+}
+
+// generatePalette();
