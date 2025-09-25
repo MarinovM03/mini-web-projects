@@ -88,3 +88,14 @@ h1:after {
     height: 120px;
     cursor: pointer;
 }
+
+.color-info {
+    background-color: #fff;
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.9rem;
+}
+
+}
