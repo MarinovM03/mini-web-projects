@@ -98,4 +98,9 @@ h1:after {
     font-size: 0.9rem;
 }
 
+.hex-value {
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
 }
