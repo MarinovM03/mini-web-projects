@@ -1,5 +1,6 @@
 const generateBtn = document.getElementById('generate-btn');
 const paletteContainer = document.querySelector('.palette-container');
+const copyBtn = document.querySelector('.copy-btn');
 
 generateBtn.addEventListener('click', generatePalette);
 
@@ -12,6 +13,13 @@ paletteContainer.addEventListener('click', (e) => {
             .catch(() => console.log(err))
     }
 });
+
+function showCopySuccess() {
+    copyBtn.classList.remove('far', 'fa-copy');
+    copyBtn.classList.add('fas', 'fa-check');
+
+    copyBtn.style.color = '#48bb78';
+}
 
 function generatePalette() {
     const colors = [];
