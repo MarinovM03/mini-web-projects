@@ -8,9 +8,17 @@ paletteContainer.addEventListener('click', (e) => {
     if (e.target.classList.contains('copy-btn')) {
         const hexValue = e.target.previousElementSibling.textContent;
 
-        navigator.clipboard.writeText(hexValue)
+        navigator.clipboard
+            .writeText(hexValue)
             .then(() => showCopySuccess())
-            .catch(() => console.log(err))
+            .catch(() => console.log(err));
+    } else if (e.target.classList.contains('color')) {
+        const hexValue = e.target.nextElementSibling.querySelector('.hex-value').textContent;
+
+        navigator.clipboard
+            .writeText(hexValue)
+            .then(() => showCopySuccess())
+            .catch(() => console.log(err));
     }
 });
 
