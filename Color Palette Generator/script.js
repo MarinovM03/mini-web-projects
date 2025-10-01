@@ -3,11 +3,13 @@ const paletteContainer = document.querySelector('.palette-container');
 
 generateBtn.addEventListener('click', generatePalette);
 
-paletteContainer.addEventListener('click', function(e) {
+paletteContainer.addEventListener('click', (e) => {
     if (e.target.classList.contains('copy-btn')) {
         const hexValue = e.target.previousElementSibling.textContent;
 
-        navigator.clipboard.writeText(hexValue);
+        navigator.clipboard.writeText(hexValue)
+            .then(() => showCopySuccess())
+            .catch(() => console.log(err))
     }
 });
 
