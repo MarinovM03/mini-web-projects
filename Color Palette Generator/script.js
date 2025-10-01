@@ -19,6 +19,12 @@ function showCopySuccess() {
     copyBtn.classList.add('fas', 'fa-check');
 
     copyBtn.style.color = '#48bb78';
+
+    setTimeout(() => {
+        copyBtn.classList.remove('fas', 'fa-check');
+        copyBtn.classList.add('far', 'fa-copy');
+        copyBtn.style.color = '';
+    }, 1500);
 }
 
 function generatePalette() {
